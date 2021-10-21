@@ -28,7 +28,7 @@ namespace PaymentAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PaymentDetailContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            options.UseSqlite(Configuration.GetConnectionString("DevConnection")));
             services.AddControllers();
             services.AddCors();
 
